@@ -6,11 +6,16 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 version = project.property("firebase-firestore.version") as String
 
+
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
     kotlin("plugin.serialization") version "1.4.31"
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+group 'dev.gitlive.firebase.firestore'
+version '0.0.1'
 
 android {
     compileSdkVersion(property("targetSdkVersion") as Int)
